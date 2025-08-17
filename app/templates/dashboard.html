@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CheckMate AI Dashboard</title>
+</head>
+<body>
+    <h1>CheckMate AI</h1>
+    <h2>Add New Client</h2>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <label>Goal:</label><br>
+        <input type="text" name="goal"><br><br>
+
+        <input type="submit" value="Add Client">
+    </form>
+
+    <h2>All Clients</h2>
+    <ul>
+        {% for client in clients %}
+            <li><strong>{{ client.name }}</strong> – {{ client.goal }} ({{ client.email }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
